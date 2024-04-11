@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { baseURL } from "./services/axios-config";
 
 export default function Login()
 {
@@ -19,7 +20,7 @@ export default function Login()
 
     async function doLoginInfo()
     {
-      const url = "http://localhost:2003/product/dologin";
+      const url = `${baseURL}/product/dologin`;
       const servermesg = await axios.post(url ,loginInfo);
       // alert(JSON.stringify(servermesg));
         if(servermesg.data.status === true)

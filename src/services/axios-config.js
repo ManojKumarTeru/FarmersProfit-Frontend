@@ -19,7 +19,9 @@
 // const axios = require("axios");
 import axios from "axios";
 
-const baseURL="http://localhost:2003";  // baseURL is case sensitive-dont change it
+// const baseURL="http://localhost:2003";// baseURL is case sensitive-dont change it
+
+const baseURL = "https://g2c-1.onrender.com";
 
 const publicAxios=axios.create({baseURL});
 
