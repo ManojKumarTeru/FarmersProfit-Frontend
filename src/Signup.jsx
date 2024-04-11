@@ -1,6 +1,7 @@
 import { useState } from "react"
 import axios from "axios";
 import { BrowserRouter, Link, Routes, Route, useNavigate } from 'react-router-dom';
+import { baseURL } from "./services/axios-config";
 
 export default function Signup() {
 
@@ -17,7 +18,7 @@ export default function Signup() {
     }
 
     async function doSaveSignup() {
-        const url = "http://localhost:2003/product/save-signup";
+        const url = `${baseURL}/product/save-signup`;
         const servermesg = await axios.post(url, info);
         // alert("hello");
         if (servermesg.data.status === true) {

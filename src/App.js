@@ -19,7 +19,7 @@ function App() {
       <Route path="/ManageProduct" element={<ItemManager/>}></Route>
       <Route path="/Dashboard_g" element={<Dashboard_g></Dashboard_g>}></Route>
       <Route path="/Findgrower" element={<Findgrower></Findgrower>}></Route>
-      <Route path="*" element={<Login/>}></Route>
+      <Route path="*" element={<Signup/>}></Route>
     </Routes>
     </>
   );
